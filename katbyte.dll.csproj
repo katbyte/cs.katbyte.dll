@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright © 2014 kt@katbyte.me -->
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- This section must be before the katbyte.properties import -->
+  <PropertyGroup>
+    <ProjectGuid>{2A6B6174-0707-1987-0707-627974650000}</ProjectGuid>
+    <RootNamespace>katbyte</RootNamespace>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <!-- import default build configurations and properties -->
+  <Import Project=".build\katbyte.properties" />
+  <!-- project contents -->
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="code\console\color\CC.cs" />
+    <Compile Include="code\console\color\ColorConsole.cs" />
+    <Compile Include="code\console\color\ConsoleColors.cs" />
+    <Compile Include="code\console\color\CT.cs" />
+    <Compile Include="code\console\KPoint.cs" />
+    <Compile Include="code\console\helpers\ConsoleDots.cs" />
+    <Compile Include="code\console\Konsole.cs" />
+    <Compile Include="code\console\KonsoleProgram.cs" />
+    <Compile Include="code\extend\linq\Extend_IEnumerable.cs" />
+    <Compile Include="code\extend\type\Extend_Exception.cs" />
+    <Compile Include="code\extend\type\Extend_List.cs" />
+    <Compile Include="code\extend\type\Extend_Array.cs" />
+    <Compile Include="code\extend\type\Extend_Queue.cs" />
+    <Compile Include="code\extend\type\Extend_String.cs" />
+    <Compile Include="code\AutoStopWatch.cs" />
+    <Compile Include="code\extend\type\Extend_DateTime.cs" />
+    <Compile Include="code\extend\type\Extend_TimeSpan.cs" />
+    <Compile Include="code\extend\type\Extend_Object.cs" />
+    <Compile Include="code\util\KPath.cs" />
+    <Compile Include="code\win32\Win32.cs" />
+    <Compile Include="code\win32\Win32.Kernel32.cs" />
+    <Compile Include="code\win32\Win32.User32.cs" />
+    <Compile Include="code\win32\Windef.cs" />
+    <Compile Include="properties\AssemblyInfo.cs" />
+    <Compile Include="properties\AssemblyVersion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".version" />
+  </ItemGroup>
+  <!-- default c# targets -->
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- additional tasks go below here -->
+  <Import Project=".build\katbyte.targets.versioning" />
+</Project>
