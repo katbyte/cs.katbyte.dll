@@ -4,14 +4,15 @@
 
 
 #visual studio user files]
+.vs/
 *csproj.user
 *.suo
-.vs
 
 
 #compiled files
 bin/
-obj/
+.obj/
+
 
 #version file
 AssemblyVersion.cs

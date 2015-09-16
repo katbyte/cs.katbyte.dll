@@ -40,7 +40,7 @@ namespace katbyte.extend {
         }
 
         /// <summary>
-        /// takes a single item and returns an enumerable of it
+        /// takes a single item and returns an enumerable for it
         /// </summary>
         public static IEnumerable<T> Yield<T>(this T item) {
             yield return item;

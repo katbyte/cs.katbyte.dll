@@ -1,13 +1,12 @@
 ﻿//Copyright © 2015 kt@katbyte.me
-using System;
 using System.IO;
 
 
 
-namespace katbyte.extend {
+namespace katbyte.utility {
 
     /// <summary>
-    /// katbyte path utility ckass
+    /// katbyte path utility class
     /// </summary>
     public static class KPath {
 
@@ -15,7 +14,7 @@ namespace katbyte.extend {
         /// <summary>
         /// ensures the path is rooted, if root is null current directory is used
         /// </summary>
-        public static string EnsureRoot(string path, string root = null) {
+        public static string EnsureRooted(string path, string root = null) {
             if (Path.IsPathRooted(path)) {
                 return path;
             }
