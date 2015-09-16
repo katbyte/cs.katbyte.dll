@@ -72,20 +72,25 @@ namespace katbyte.extend {
 
             string exceptions = "";
             for ( Exception e = ex; e != null; e = e.InnerException ) {
-                AggregateException ae = e as AggregateException;
 
-                if ( ae == null ) {
-                    string stack = regexReplaceFolder.Replace( e.StackTrace ?? "", regexReplaceFolderEval).Replace("at ", "" + indent).Replace(":line ", ":");
+                #if !DOTNET_35
+                    //handle .net 4.0 and higher AggregateException type
+                    var ae = e as AggregateException;
 
-                    exceptions = nl + indent + "#### " + e.GetType().Name + " => " + e.Message.Trim() + nl + stack + exceptions;
-                } else {
-                    foreach (var aie in ae.InnerExceptions) {
-                        var stack  = UnrollInnnerExceptions(aie, "    " + indent, nl, depth + 1);
-                        exceptions = nl + indent + "#### " + e.GetType().Name + " => " + e.Message.Trim() + stack + exceptions;
+                    if (ae != null) {
+                        foreach (var aie in ae.InnerExceptions) {
+                            var aestack  = UnrollInnnerExceptions(aie, "    " + indent, nl, depth + 1);
+                            exceptions = nl + indent + "#### " + e.GetType().Name + " => " + e.Message.Trim() + aestack + exceptions;
+                        }
+
+                        break;
                     }
+                #endif
 
-                    break;
-                }
+
+                string stack = regexReplaceFolder.Replace( e.StackTrace ?? "", regexReplaceFolderEval).Replace("at ", "" + indent).Replace(":line ", ":");
+                exceptions = nl + indent + "#### " + e.GetType().Name + " => " + e.Message.Trim() + nl + stack + exceptions;
+
             }
 
             return exceptions;
