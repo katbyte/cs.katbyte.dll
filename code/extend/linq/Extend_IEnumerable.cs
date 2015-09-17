@@ -46,5 +46,63 @@ namespace katbyte.extend {
             yield return item;
         }
 
+
+        /// <summary>
+        /// returns the object with the maximum value determined via a selector
+        /// </summary>
+        public static TSource MaxBy<TSource, TValue>(this IEnumerable<TSource> source, Func<TSource, TValue> selector, IComparer<TValue> comparer = null) {
+            using (IEnumerator<TSource> enumerator = source.GetEnumerator()) {
+                if (!enumerator.MoveNext()) {
+                    throw new InvalidOperationException("sequence is empty");
+                }
+
+                if (comparer == null) {
+                    comparer = Comparer<TValue>.Default;
+                }
+
+                TSource max      = enumerator.Current;
+                TValue  maxValue = selector(max);
+                while (enumerator.MoveNext()) {
+                    TSource o = enumerator.Current;
+                    TValue  v = selector(o);
+                    if (comparer.Compare(v, maxValue) > 0) {
+                        max      = o;
+                        maxValue = v;
+                    }
+                }
+
+                return max;
+            }
+        }
+
+
+        /// <summary>
+        /// returns the object with the minimum value determined via a selector
+        /// </summary>
+        public static TSource MinBy<TSource, TValue>(this IEnumerable<TSource> source, Func<TSource, TValue> selector, IComparer<TValue> comparer = null) {
+            using (IEnumerator<TSource> enumerator = source.GetEnumerator()) {
+                if (!enumerator.MoveNext()) {
+                    throw new InvalidOperationException("sequence is empty");
+                }
+
+                if (comparer == null) {
+                    comparer = Comparer<TValue>.Default;
+                }
+
+                TSource min      = enumerator.Current;
+                TValue  minValue = selector(min);
+                while (enumerator.MoveNext()) {
+                    TSource o = enumerator.Current;
+                    TValue  v = selector(o);
+                    if (comparer.Compare(v, minValue) < 0) {
+                        min      = o;
+                        minValue = v;
+                    }
+                }
+
+                return min;
+            }
+        }
+
     }
 }

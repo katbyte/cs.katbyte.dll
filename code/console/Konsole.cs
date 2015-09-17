@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 
+using katbyte.data;
 using katbyte.extend;
 using katbyte.win32;
 

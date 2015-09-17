@@ -19,7 +19,8 @@
     <Compile Include="code\console\color\ColorConsole.cs" />
     <Compile Include="code\console\color\ConsoleColors.cs" />
     <Compile Include="code\console\color\CT.cs" />
-    <Compile Include="code\console\KPoint.cs" />
+    <Compile Include="code\data\KSize.cs" />
+    <Compile Include="code\data\KPoint.cs" />
     <Compile Include="code\console\helpers\ConsoleDots.cs" />
     <Compile Include="code\console\Konsole.cs" />
     <Compile Include="code\console\KonsoleProgram.cs" />
