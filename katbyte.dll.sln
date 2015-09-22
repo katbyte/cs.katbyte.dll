@@ -7,20 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "katbyte.dll", "katbyte.dll.
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		3.5.debug|Any CPU = 3.5.debug|Any CPU
-		3.5.release|Any CPU = 3.5.release|Any CPU
-		4.5.debug|Any CPU = 4.5.debug|Any CPU
-		4.5.release|Any CPU = 4.5.release|Any CPU
+		debug|Any CPU = debug|Any CPU
+		release|Any CPU = release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2A6B6174-0707-1987-0707-627974650000}.3.5.debug|Any CPU.ActiveCfg = 3.5.debug|Any CPU
-		{2A6B6174-0707-1987-0707-627974650000}.3.5.debug|Any CPU.Build.0 = 3.5.debug|Any CPU
-		{2A6B6174-0707-1987-0707-627974650000}.3.5.release|Any CPU.ActiveCfg = 3.5.release|Any CPU
-		{2A6B6174-0707-1987-0707-627974650000}.3.5.release|Any CPU.Build.0 = 3.5.release|Any CPU
-		{2A6B6174-0707-1987-0707-627974650000}.4.5.debug|Any CPU.ActiveCfg = 4.5.debug|Any CPU
-		{2A6B6174-0707-1987-0707-627974650000}.4.5.debug|Any CPU.Build.0 = 4.5.debug|Any CPU
-		{2A6B6174-0707-1987-0707-627974650000}.4.5.release|Any CPU.ActiveCfg = 4.5.release|Any CPU
-		{2A6B6174-0707-1987-0707-627974650000}.4.5.release|Any CPU.Build.0 = 4.5.release|Any CPU
+		{2A6B6174-0707-1987-0707-627974650000}.debug|Any CPU.ActiveCfg = debug|Any CPU
+		{2A6B6174-0707-1987-0707-627974650000}.debug|Any CPU.Build.0 = debug|Any CPU
+		{2A6B6174-0707-1987-0707-627974650000}.release|Any CPU.ActiveCfg = release|Any CPU
+		{2A6B6174-0707-1987-0707-627974650000}.release|Any CPU.Build.0 = release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
