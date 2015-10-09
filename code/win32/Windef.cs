@@ -1,4 +1,6 @@
 ﻿//Copyright © 2014 kt@katbyte.me
+using System;
+
 
 
 namespace katbyte.win32 {

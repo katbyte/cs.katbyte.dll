@@ -26,6 +26,7 @@
     <Compile Include="code\console\KonsoleProgram.cs" />
     <Compile Include="code\extend\linq\Extend_IEnumerable.cs" />
     <Compile Include="code\extend\type\Extend_Exception.cs" />
+    <Compile Include="code\extend\type\Extend_Thread.cs" />
     <Compile Include="code\extend\type\Extend_List.cs" />
     <Compile Include="code\extend\type\Extend_Array.cs" />
     <Compile Include="code\extend\type\Extend_Queue.cs" />
