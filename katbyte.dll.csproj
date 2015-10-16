@@ -35,6 +35,7 @@
     <Compile Include="code\extend\type\Extend_DateTime.cs" />
     <Compile Include="code\extend\type\Extend_TimeSpan.cs" />
     <Compile Include="code\extend\type\Extend_Object.cs" />
+    <Compile Include="code\utility\KAssembly.cs" />
     <Compile Include="code\utility\KPath.cs" />
     <Compile Include="code\win32\Win32.cs" />
     <Compile Include="code\win32\Win32.Kernel32.cs" />
